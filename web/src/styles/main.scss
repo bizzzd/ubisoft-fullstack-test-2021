@@ -1,0 +1,25 @@
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.loading-overlay-container {
+  position: relative;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;  
+}
+
+.required:after {
+  content:" *";
+  margin-left: 5px;
+  color: red;
+}

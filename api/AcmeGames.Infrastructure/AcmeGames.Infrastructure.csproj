@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Persistance\SeedFiles\games.json" />
+    <None Remove="Persistance\SeedFiles\keys.json" />
+    <None Remove="Persistance\SeedFiles\ownership.json" />
+    <None Remove="Persistance\SeedFiles\users.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Persistance\SeedFiles\games.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Persistance\SeedFiles\keys.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Persistance\SeedFiles\ownership.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Persistance\SeedFiles\users.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.3" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.3" />
+	<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AcmeGames.Application\AcmeGames.Application.csproj" />
+    <ProjectReference Include="..\AcmeGames.Domain\AcmeGames.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
